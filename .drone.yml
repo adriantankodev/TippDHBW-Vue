@@ -16,6 +16,6 @@ steps:
       from_secret: gitea_username
     password:
       from_secret: gitea_password
-    repo: adriantankodev/tippdhbw-vue
+    repo: gitea.int.tanko.one/adriantankodev/tippdhbw-vue
     tags: latest
-    registry: https://gitea.int.tanko.one
+    registry: gitea.int.tanko.one
