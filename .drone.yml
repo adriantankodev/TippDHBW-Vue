@@ -1,0 +1,21 @@
+kind: pipeline
+name: default
+type: docker
+
+steps:
+- name: build
+  image: node:12
+  commands:
+  - npm install
+  - npm run build
+
+- name: deploy
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: gitea_username
+    password:
+      from_secret: gitea_password
+    repo: adriantankodev/tippdhbw-vue
+    tags: latest
+    registry: https://gitea.int.tanko.one
