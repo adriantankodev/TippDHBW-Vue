@@ -1,7 +1,7 @@
 <template> 
   <section id="bg_ost" class="jumbotron text-center">
     <div class="container">
-      <h1 class="custom-class">Willkommen bei TippMeToTheMoon!</h1>
+      <h1 class="custom-class">Willkommen bei TippMeToTheMoooooooooooooon!</h1>
       <h6 id="text_home" class="custom-class">Wir bieten Euch ein phänomenales Tipperlebnis mit unzähligen Features. <br> Probiert es
         selbst aus und ladet Eure Freunde ein für eine einzigartige Erfahrung! <br> Viel Spaß! </h6>
     </div>
