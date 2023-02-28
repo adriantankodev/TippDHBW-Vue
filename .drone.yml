@@ -4,7 +4,7 @@ type: docker
 
 steps:
 - name: build
-  image: node:12
+  image: node:alpine
   commands:
   - npm install
   - npm run build
