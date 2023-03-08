@@ -1,6 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
+import { validateToken } from '../auth'
+
+const guardRoute = async (to, from, next) => {
+  let val = await validateToken(JSON.parse(localStorage.getItem('token')))
+  if (val) {
+    next()
+  } else {
+    next('/login/?redirect=' + to.path)
+  }
+}
+
+const loggedin = async (to, from, next) => {
+  let val = await validateToken(JSON.parse(localStorage.getItem('token')))
+  if (val) {
+    next('/')
+  } else {
+    next()
+  }
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -22,17 +42,32 @@ const router = createRouter({
     {
       path: '/tippabgabe',
       name: 'tippabgabe',
+      beforeEnter: guardRoute,
       component: () => import('../views/TippabgabeView.vue')
     },
     {
       path: '/tippuebersicht',
       name: 'tippuebesicht',
+      beforeEnter: guardRoute,
       component: () => import('../views/TippuebersichtView.vue')
     },
     {
       path: '/rangliste',
       name: 'rangliste',
+      beforeEnter: guardRoute,
       component: () => import('../views/RanglisteView.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      beforeEnter: loggedin,
+      component: () => import('../views/LoginView.vue')
+    },
+    {
+      path: '/register',
+      name: 'register',
+      beforeEnter: loggedin,
+      component: () => import('../views/RegisterView.vue')
     },
     {
       path: '/:pathMatch(.*)*',

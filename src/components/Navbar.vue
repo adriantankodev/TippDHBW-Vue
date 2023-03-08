@@ -26,6 +26,9 @@
                     <li class="nav-item" style="cursor: pointer">
                         <a class="nav-link px-2" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" active-class="active" v-on:click="this.$router.push({path: '/about'})">Über uns</a>
                     </li>
+                    <li class="nav-item" style="cursor: pointer">
+                        <a class="nav-link px-2" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" active-class="active" v-on:click="logout()">Logout</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -34,7 +37,13 @@
 
 <script>
 export default {
- 
+    name: 'Navbar',
+    methods: {
+        logout() {
+            localStorage.removeItem('token');
+            this.$router.push({path: '/login'});
+        }
+    }
 }
 </script>
 
