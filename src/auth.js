@@ -21,8 +21,15 @@ const register = async (username, email, password) => {
     console.log(json)
 
     if(status === 200 && json.token) {
+        
         localStorage.setItem('token', JSON.stringify(json.token));
-        return { 'msg': 'Registration successful', 'redirect': '/' };
+
+        let redirect = new URLSearchParams(window.location.search).get('redirect');
+        if (!redirect) {
+            redirect = '/';
+        }
+
+        return { 'msg': 'Registration successful', 'redirect': redirect };
     } else {
         return { 'msg': json.msg, 'redirect': null };
     }
@@ -44,7 +51,7 @@ const login = async (email, password) => {
 
         localStorage.setItem('token', JSON.stringify(json.token));
 
-        let redirect = new URLSearchParams(window.location.search).get('redirect');;
+        let redirect = new URLSearchParams(window.location.search).get('redirect');
         if (!redirect) {
             redirect = '/';
         }
@@ -62,14 +69,15 @@ const validateToken = async (token) => {
     };
 
     const response = await fetch(`http://localhost:3000/api/user/auth`, requestOptions);
-    const status = response.status;
-    const json = await response.json();
 
-    if(status === 200 && json.success) {
-        return true;
-    } else {
-        return false;
+    let json;
+    try {
+        json = await response.json();
+    } catch (e) {
+        return console.log(e)
     }
+
+    return json;
 }
 
 export {

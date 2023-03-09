@@ -5,7 +5,7 @@ import { validateToken } from '../auth'
 
 const guardRoute = async (to, from, next) => {
   let val = await validateToken(JSON.parse(localStorage.getItem('token')))
-  if (val) {
+  if (val.success) {
     next()
   } else {
     next('/login/?redirect=' + to.path)
@@ -14,7 +14,7 @@ const guardRoute = async (to, from, next) => {
 
 const loggedin = async (to, from, next) => {
   let val = await validateToken(JSON.parse(localStorage.getItem('token')))
-  if (val) {
+  if (val.success) {
     next('/')
   } else {
     next()
@@ -61,13 +61,19 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       beforeEnter: loggedin,
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/userManagement/LoginView.vue')
     },
     {
       path: '/register',
       name: 'register',
       beforeEnter: loggedin,
-      component: () => import('../views/RegisterView.vue')
+      component: () => import('../views/userManagement/RegisterView.vue')
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      beforeEnter: guardRoute,
+      component: () => import('../views/userManagement/ProfileView.vue')
     },
     {
       path: '/:pathMatch(.*)*',

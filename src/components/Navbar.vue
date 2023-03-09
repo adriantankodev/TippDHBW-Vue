@@ -27,7 +27,7 @@
                         <a class="nav-link px-2" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" active-class="active" v-on:click="this.$router.push({path: '/about'})">Über uns</a>
                     </li>
                     <li class="nav-item" style="cursor: pointer">
-                        <a class="nav-link px-2" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" active-class="active" v-on:click="logout()">Logout</a>
+                        <a class="nav-link px-2" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" active-class="active" v-on:click="this.$router.push({path: '/profile'})">Profile</a>
                     </li>
                 </ul>
             </div>

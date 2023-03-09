@@ -14,14 +14,14 @@
     </div>
     <button @click="register">Register</button>
 
-    <p>Already have an account?</p> <router-link to="/login">Login</router-link>
+    <p>Already have an account?</p> <a v-on:click="login()">Login!</a>
     <p>{{ message }}</p>
 </template>
 
 <script>
 
-import router from '../router';
-import { register } from '../auth';
+import router from '../../router';
+import { register } from '../../auth';
 
 export default {
     name: 'RegisterView',
@@ -41,6 +41,10 @@ export default {
             if(response.redirect !== null) {
                 router.push({path: response.redirect});
             }
+        },
+        login() {
+            const redirect = new URLSearchParams(window.location.search).get('redirect');
+            router.push('/login?redirect=' + redirect);
         }
     }
 }
