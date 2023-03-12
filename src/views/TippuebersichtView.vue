@@ -4,14 +4,11 @@
     <header class="d-flex flex-wrap justify-content-around align-items-center">
       <h1>Tippübersicht</h1>
       <div class="form-group col-md-4">
-        <select v-model="selected" class="form-control">
-          <option disabled value="">Spieler wählen</option>
-          <option v-for="user in users" :value="user.user_id" :key="user.user_id">{{ user.name }}</option>
-        </select>
+        <input v-model="currentMatchday" class="form-control" type="number" min="1" max="34">
       </div>
     </header>
 
-    <TippuebersichtTable :userid="selected" />
+    <TippuebersichtTable :current-matchday="this.currentMatchday" />
 
   </main>
 </template>
@@ -19,25 +16,21 @@
 <script setup>
 
 import TippuebersichtTable from '../components/TippuebersichtTable.vue'
-import { ref } from 'vue'
-const selected = ref('')
 
 </script>
 
 <script>
 
-import { db } from '../firebase.js'
-import { collection, getDocs, query } from "firebase/firestore";
-
-const querySnapshot = await getDocs(query(collection(db, "users")));
-let users = querySnapshot.docs.map(doc => doc.data());
+import { getCurrentMatchday, getMatches, submitTipp, getTipps } from '../tipp.js'
 
 export default {
   data() {
     return {
-      selected: "",
-      users
+      currentMatchday: 1,
     }
+  },
+  async mounted() {
+    this.currentMatchday = await getCurrentMatchday();
   }
 }
 
