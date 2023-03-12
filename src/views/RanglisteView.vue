@@ -12,9 +12,9 @@
                 </thead>
                 <tbody>
                     <tr v-for="user in users" :key="user.user_id">
-                        <th scope="row">{{ user.user_id }}</th>
-                        <td>{{ user.name }}</td>
-                        <td><b>{{ user.total_points }}</b></td>
+                        <th scope="row">{{ user.rank }}</th>
+                        <td>{{ user.username }}</td>
+                        <td><b>{{ user.points }}</b></td>
                     </tr>
                 </tbody>
             </table>
@@ -24,20 +24,19 @@
 
 <script>
 
-import { db } from '../firebase.js'
-
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
-
-const querySnapshot = await getDocs(query(collection(db, "users")));
-let users = querySnapshot.docs.map(doc => doc.data());
-users.sort((a, b) => b.total_points - a.total_points);
-users.map((user, index) => user.user_id = index + 1);
+import { getUsers } from '../tipp.js'
 
 export default {
     data() {
         return {
-            users
+            users: []
         }
+    },
+    async mounted() {
+        this.users = await getUsers();
+        this.users.sort((a, b) => b.points - a.points);
+        this.users.map((user, index) => user.rank = index + 1);
+        console.log(this.users);
     }
 }
 

@@ -1,7 +1,6 @@
 const authHeader = () => {
-    let user = JSON.parse(localStorage.getItem('token'));
-
-    if (user && user.accessToken) {
+    let token = JSON.parse(localStorage.getItem('token'));
+    if (token) {
         return { Authorization: 'Bearer ' + token };
     } else {
         return {};
@@ -18,7 +17,6 @@ const register = async (username, email, password) => {
     const response = await fetch(`http://localhost:3000/api/user/register`, requestOptions);
     const status = response.status;
     const json = await response.json();
-    console.log(json)
 
     if(status === 200 && json.token) {
         
