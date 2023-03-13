@@ -17,7 +17,7 @@
       <tbody class="table-light">
         <tr v-for="team in table" :key="team.Standing" class="table">
           <th class="place" scope="row">{{ team.teamStanding }}</th>
-          <td class="logo"><img :src="team.teamIconUrl" height="30"></td>
+          <td class="logo text-center"><img :src="team.teamIconUrl" height="30"></td>
           <td>{{ team.teamName }}</td>
           <td class="spiele">{{ team.teamMatches }}</td>
           <td class="differenz">{{ team.teamGoalDifference }}</td>
