@@ -15,172 +15,18 @@
         </tr>
       </thead>
       <tbody class="table-light">
-        <tr class="table-success">
-          <th class="place" scope="row">1</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000V.svg" height="20px"></td>
-          <td>Union Berlin</td>
-          <td class="spiele">10</td>
-          <td class="differenz">12</td>
-          <td class="points">23</td>
-        </tr>
-        <tr class="table-success">
-          <th class="place" scope="row">2</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000G.svg" height="20px"></td>
-          <td>FC Bayern München</td>
-          <td class="spiele">10</td>
-          <td class="differenz">22</td>
-          <td class="points">19</td>
-        </tr>
-        <tr class="table-success">
-          <th class="place" scope="row">3</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000A.svg" height="20px"></td>
-          <td>SC Freiburg</td>
-          <td class="spiele">10</td>
-          <td class="differenz">1</td>
-          <td class="points">18</td>
-        </tr>
-        <tr class="table-success">
-          <th class="place" scope="row">4</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000002.svg" height="20px"></td>
-          <td>TSG Hoffenheim</td>
-          <td class="spiele">10</td>
-          <td class="differenz">7</td>
-          <td class="points">17</td>
-        </tr>
-        <tr class="table-info">
-          <th class="place" scope="row">5</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000F.svg" height="20px"></td>
-          <td>Eintracht Frankfurt</td>
-          <td class="spiele">10</td>
-          <td class="differenz">4</td>
-          <td class="points">17</td>
-        </tr>
-        <tr class="table-primary">
-          <th class="place" scope="row">6</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000004.svg" height="20px"></td>
-          <td>Borussia Mönchengladbach</td>
-          <td class="spiele">10</td>
-          <td class="differenz">4</td>
-          <td class="points">16</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">7</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000008.svg" height="20px"></td>
-          <td>1. FC Köln</td>
-          <td class="spiele">10</td>
-          <td class="differenz">2</td>
-          <td class="points">16</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">8</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000007.svg" height="20px"></td>
-          <td>Borussia Dortmund</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-1</td>
-          <td class="points">16</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">9</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000E.svg" height="20px"></td>
-          <td>SV Werder Bremen</td>
-          <td class="spiele">10</td>
-          <td class="differenz">4</td>
-          <td class="points">15</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">10</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000017.svg" height="20px"></td>
-          <td>RB Leipzig</td>
-          <td class="spiele">10</td>
-          <td class="differenz">2</td>
-          <td class="points">15</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">11</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000006.svg" height="20px"></td>
-          <td>FSV Mainz 05</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-2</td>
-          <td class="points">15</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">12</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000010.svg" height="20px"></td>
-          <td>FC Augsburg</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-5</td>
-          <td class="points">13</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">13</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000003.svg" height="20px"></td>
-          <td>VfL Wolfsburg</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-6</td>
-          <td class="points">10</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">14</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000D.svg" height="20px"></td>
-          <td>VfB Stuttgart</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-2</td>
-          <td class="points">8</td>
-        </tr>
-        <tr>
-          <th class="place" scope="row">15</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000Z.svg" height="20px"></td>
-          <td>Hertha BSC</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-3</td>
-          <td class="points">8</td>
-        </tr>
-        <tr class="table-warning">
-          <th class="place" scope="row">16</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000B.svg" height="20px"></td>
-          <td>Bayer 04 Leverkusen</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-7</td>
-          <td class="points">8</td>
-        </tr>
-        <tr class="table-danger">
-          <th class="place" scope="row">17</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000009.svg" height="20px"></td>
-          <td>Schalke 04</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-14</td>
-          <td class="points">6</td>
-        </tr>
-        <tr class="table-danger">
-          <th class="place" scope="row">18</th>
-          <td class="logo"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000S.svg" height="20px"></td>
-          <td>VfL Bochum</td>
-          <td class="spiele">10</td>
-          <td class="differenz">-18</td>
-          <td class="points">4</td>
+        <tr v-for="team in table" :key="team.Standing" class="table">
+          <th class="place" scope="row">{{ team.teamStanding }}</th>
+          <td class="logo"><img :src="team.teamIconUrl" height="30"></td>
+          <td>{{ team.teamName }}</td>
+          <td class="spiele">{{ team.teamMatches }}</td>
+          <td class="differenz">{{ team.teamGoalDifference }}</td>
+          <td class="points">{{ team.teamPoints }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <div>
-    <table>
-      <thead>
-        <tr>
-          <th class="place" scope="col">Platz</th>
-          <th scope="col">Team</th>
-          <th class="points" scope="col">Punkte</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="team in table" :key="team.teamStanding">
-          <td>{{ team.teamStanding }}</td>
-          <td>{{ team.teamName }}</td>
-          <td>{{ team.teamPoints }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </template>
 
 <script>

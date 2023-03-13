@@ -36,7 +36,6 @@ export default {
         this.users = await getUsers();
         this.users.sort((a, b) => b.points - a.points);
         this.users.map((user, index) => user.rank = index + 1);
-        console.log(this.users);
     }
 }
 
